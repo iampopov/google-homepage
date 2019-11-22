@@ -1,5 +1,5 @@
 body{
-    background: bisque;
+    background: rgb(236, 236, 236);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -24,18 +24,6 @@ body{
     color: red;
 }
 
-.searchButton {
-    width: 30px;
-    height: 30px;
-    border: 2px solid rgb(122, 69, 69);
-    background: rgb(122,69,69);
-    text-align: center;
-    color: rgb(231, 198, 198);
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    font-size: 18px;
-}
-
 .wrap {
     width: 30%;
     position: absolute;
@@ -43,8 +31,47 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-.nothing-search:S {
-    content: "\f002";
-    color: red;
+.buttons {
+    position: absolute;
+    top: 65%;
+    left: 36%;
 }
+.buttonSearch {
+    display: inline-block;
+    border-radius: 2px;
+    background-color: #9c9c9c;
+    border: none;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 16px;
+    padding: 2px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .buttonSearch span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .buttonSearch span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .buttonSearch:hover span {
+    padding-right: 25px;
+  }
+  
+  .buttonSearch:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
